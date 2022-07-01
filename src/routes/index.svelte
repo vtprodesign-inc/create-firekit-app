@@ -1,5 +1,2 @@
-<script>
-  import { authUser } from "@/store/firebase";
-</script>
-
-<p>Hey you:<br/><br/>{JSON.stringify($authUser)}</p>
+<h1>Welcome to FireKit</h1>
+<p>Looking for <a href="/admin">admin?</a></p>
