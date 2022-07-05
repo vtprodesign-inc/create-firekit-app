@@ -14,5 +14,6 @@ module.exports = {
   rules: {
     "quotes": ["error", "double"],
     "linebreak-style": 0,
+    "max-len": ["error", {"code": 80, "comments": 120}],
   },
 };
