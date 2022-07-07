@@ -1,5 +1,5 @@
 {
-	"name": "@vtpro/create-firekit-app",
+	"name": "create-firekit-app",
 	"bin": "./bin/cli.js",
 	"version": "0.0.5",
 	"engines": {
