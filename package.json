@@ -1,20 +1,20 @@
 {
-	"name": "create-firekit-app",
+	"name": "@vtpro/create-firekit-app",
 	"bin": "./bin/cli.js",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "svelte-kit dev",
+		"build": "svelte-kit build",
+		"deploy": "npm run build && npm run fb:deploy",
 		"dev:emu": "cross-env VITE_FIREBASE_EMULATE=1 svelte-kit dev",
 		"fb:emu": "firebase emulators:start --import seed",
 		"fb:emu:export": "firebase emulators:start --import seed --export-on-exit seed",
 		"fb:deploy": "firebase deploy",
-		"build": "svelte-kit build",
-		"package": "svelte-kit package",
-		"preview": "svelte-kit preview",
-		"prepare": "svelte-kit sync",
-		"check": "svelte-check --tsconfig ./jsconfig.json",
-		"check:watch": "svelte-check --tsconfig ./jsconfig.json --watch",
-		"deploy": "npm run build && npm run fb:deploy"
+		"sk:package": "svelte-kit package",
+		"sk:preview": "svelte-kit preview",
+		"sk:prepare": "svelte-kit sync",
+		"sk:check": "svelte-check --tsconfig ./jsconfig.json",
+		"sk:check:watch": "svelte-check --tsconfig ./jsconfig.json --watch"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
@@ -24,7 +24,6 @@
 		"svelte-check": "^2.7.1",
 		"typescript": "^4.7.2"
 	},
-	"type": "module",
 	"dependencies": {
 		"firebase": "^9.8.4"
 	}
