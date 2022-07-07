@@ -34,20 +34,6 @@
     ],
     "source": "functions"
   },
-  "hosting": {
-    "public": "build",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/200.html"
-      }
-    ]
-  },
   "storage": {
     "rules": "storage.rules"
   }

@@ -2,21 +2,11 @@ import { initializeApp } from "firebase/app";
 import { getStorage, connectStorageEmulator } from "firebase/storage"
 import { getAuth, connectAuthEmulator } from "firebase/auth";
 import { getFirestore, connectFirestoreEmulator } from "firebase/firestore";
-import {
+import firebaseConfig, {
   fsEmulatorHost, fsEmulatorPort,
   authEmulatorHost, authEmulatorPort,
   storageEmulatorHost, storageEmulatorPort,
-} from "../constants"
-
-const firebaseConfig = {
-  apiKey: "<INSERT>",
-  authDomain: "<PROJECT ID>.firebaseapp.com",
-  projectId: "<PROJECT ID>",
-  storageBucket: "<PROJECT ID>.appspot.com",
-  messagingSenderId: "<INSERT>",
-  appId: "<INSERT>",
-  measurementId: "<INSERT>"
-};
+} from "./config"
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);

@@ -17,3 +17,13 @@ export const authEmulatorPort = firebaseJson.emulators.auth.port
 /* storage emulator */
 export const storageEmulatorHost = import.meta.env.VITE_FIREBASE_EMU_HOST || 'localhost'
 export const storageEmulatorPort = firebaseJson.emulators.storage.port
+
+export default {
+  apiKey: "<INSERT>",
+  authDomain: "<PROJECT ID>.firebaseapp.com",
+  projectId: "<PROJECT ID>",
+  storageBucket: "<PROJECT ID>.appspot.com",
+  messagingSenderId: "<INSERT>",
+  appId: "<INSERT>",
+  measurementId: "<INSERT>"
+};

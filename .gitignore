@@ -7,3 +7,5 @@ node_modules
 .env.*
 !.env.example
 firebase-debug.log
+secrets
+src/firebase/config.js
