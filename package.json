@@ -1,6 +1,6 @@
 {
 	"name": "@vtpro/create-firekit-app",
-	"bin": "./bin/cli.cjs",
+	"bin": "./bin/cli.js",
 	"version": "0.0.4",
 	"engines": {
 		"npm": ">=7.0.0",
@@ -23,12 +23,12 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
+		"firebase-admin": "^11.0.0",
 		"minimist": "^1.2.6",
 		"svelte": "^3.44.0",
 		"svelte-check": "^2.7.1",
 		"typescript": "^4.7.2"
 	},
-	"type": "module",
 	"dependencies": {
 		"firebase": "^9.8.4"
 	}
