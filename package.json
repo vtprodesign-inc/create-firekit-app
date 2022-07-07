@@ -1,7 +1,7 @@
 {
 	"name": "@vtpro/create-firekit-app",
-	"bin": "./bin/cli.js",
-	"version": "0.0.2",
+	"bin": "./bin/cli.cjs",
+	"version": "0.0.1",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
@@ -24,6 +24,7 @@
 		"svelte-check": "^2.7.1",
 		"typescript": "^4.7.2"
 	},
+	"type": "module",
 	"dependencies": {
 		"firebase": "^9.8.4"
 	}
