@@ -16,7 +16,7 @@ npm run dev -- --open
 Add `--host` flag to allow testing with other devices on the network:
 
 ```bash
-yarn dev --host
+npm run dev --host
 ```
 
 ### Firebase
@@ -52,7 +52,7 @@ You can preview the production build with `npm run preview`.
 - `npm run deploy` to firebase
 - To update CORS configuration, modify `cors.json` and run `gsutil cors set cors.json gs://<FIREBASE APP NAME>` (may require gcloud login)
 
-### Use Firebase Hosting (requires static adapter in `svelte.config.js` ?)
+### Use Firebase Hosting
 
 Add following block to `firebase.json`:
 ```
@@ -70,4 +70,17 @@ Add following block to `firebase.json`:
       }
     ]
   },
+```
+
+May require static adapter in svelte.config.js:
+```
+import adapter from '@sveltejs/adapter-static';
+
+const config = {
+  ...
+  kit: {
+    adapter: adapter({ fallback: '200.html' }),
+    ...
+  }
+}
 ```
