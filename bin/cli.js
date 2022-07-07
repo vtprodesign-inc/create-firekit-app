@@ -13,8 +13,10 @@ const runCommand = command => {
 }
 
 const repoName = process.argv[2];
-const gitCheckoutCommand = `git clone --depth 1 git@bitbucket.org:vtprodesign/firekit.git ${repoName}`;
+const gitCheckoutCommand = `git clone --depth 1 git@github.com:vtprodesign-inc/create-firekit-app.git ${repoName}`;
 const installDepsCommand = `cd ${repoName} && npm install`;
+const installFbDepsCommand = `cd ${repoName}/functions && npm install`;
+const removeOriginCommand = `cd ${repoName} && git remote remove origin`;
 
 console.log(`Clone the repository with name ${repoName}`);
 const checkedOut = runCommand(gitCheckoutCommand);
@@ -22,7 +24,15 @@ if (!checkedOut) process.exit(-1);
 
 console.log(`Installing dependencies for ${repoName}`);
 const installedDeps = runCommand(installDepsCommand);
-if (!installDepsCommand) process.exit(-1);
+if (!installedDeps) process.exit(-1);
 
-console.log("Congratulations! You are ready. Follow the following commands to start");
+console.log(`Installing dependencies for Firebase Functions for ${repoName}`);
+const installedFbDeps = runCommand(installFbDepsCommand);
+if (!installedFbDeps) process.exit(-1);
+
+console.log(`Cleaning up...`);
+const removedOrigin = runCommand(removeOriginCommand);
+if (!removedOrigin) process.exit(-1);
+
+console.log("Congratulations! You are ready to:");
 console.log(`cd ${repoName} && npm start`);
