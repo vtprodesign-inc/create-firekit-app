@@ -1,10 +1,10 @@
 {
 	"name": "create-firekit-app",
 	"bin": "./bin/cli.js",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"repository": {
-    "type": "git",
-    "url": "https://github.com/vtprodesign-inc/create-firekit-app.git"
+		"type": "git",
+		"url": "https://github.com/vtprodesign-inc/create-firekit-app.git"
 	},
 	"engines": {
 		"npm": ">=7.0.0",
