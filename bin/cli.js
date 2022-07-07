@@ -13,7 +13,7 @@ const runCommand = command => {
 }
 
 const repoName = process.argv[2];
-const gitCheckoutCommand = `git clone --depth 1 git@github.com:vtprodesign-inc/create-firekit-app.git ${repoName}`;
+const gitCheckoutCommand = `git clone --depth 1 https://github.com/vtprodesign-inc/create-firekit-app.git ${repoName}`;
 const installDepsCommand = `cd ${repoName} && npm install`;
 const installFbDepsCommand = `cd ${repoName}/functions && npm install`;
 const removeOriginCommand = `cd ${repoName} && git remote remove origin`;
