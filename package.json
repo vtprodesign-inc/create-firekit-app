@@ -1,40 +1,41 @@
 {
-	"name": "create-firekit-app",
-	"bin": "./bin/cli.js",
-	"version": "0.0.8",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/vtprodesign-inc/create-firekit-app.git"
-	},
-	"engines": {
-		"npm": ">=7.0.0",
-		"node": ">=16.0.0"
-	},
-	"scripts": {
-		"start": "svelte-kit dev",
-		"dev": "svelte-kit dev",
-		"build": "svelte-kit build",
-		"deploy": "npm run build && npm run fb:deploy",
-		"dev:emu": "cross-env VITE_FIREBASE_EMULATE=1 svelte-kit dev",
-		"fb:emu": "firebase emulators:start --import seed",
-		"fb:emu:export": "firebase emulators:start --import seed --export-on-exit seed",
-		"fb:deploy": "firebase deploy",
-		"sk:package": "svelte-kit package",
-		"sk:preview": "svelte-kit preview",
-		"sk:prepare": "svelte-kit sync",
-		"sk:check": "svelte-check --tsconfig ./jsconfig.json",
-		"sk:check:watch": "svelte-check --tsconfig ./jsconfig.json --watch"
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/kit": "next",
-		"firebase-admin": "^11.0.0",
-		"minimist": "^1.2.6",
-		"svelte": "^3.44.0",
-		"svelte-check": "^2.7.1",
-		"typescript": "^4.7.2"
-	},
-	"dependencies": {
-		"firebase": "^9.8.4"
-	}
+  "name": "create-firekit-app",
+  "bin": "./bin/cli.cjs",
+  "version": "0.0.8",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vtprodesign-inc/create-firekit-app.git"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "start": "svelte-kit dev",
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "deploy": "npm run build && npm run fb:deploy",
+    "dev:emu": "cross-env VITE_FIREBASE_EMULATE=1 svelte-kit dev",
+    "fb:emu": "firebase emulators:start --import seed",
+    "fb:emu:export": "firebase emulators:start --import seed --export-on-exit seed",
+    "fb:deploy": "firebase deploy",
+    "sk:package": "svelte-kit package",
+    "sk:preview": "svelte-kit preview",
+    "sk:prepare": "svelte-kit sync",
+    "sk:check": "svelte-check --tsconfig ./jsconfig.json",
+    "sk:check:watch": "svelte-check --tsconfig ./jsconfig.json --watch"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "firebase-admin": "^11.0.0",
+    "minimist": "^1.2.6",
+    "svelte": "^3.44.0",
+    "svelte-check": "^2.7.1",
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "firebase": "^9.8.4"
+  }
 }
