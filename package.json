@@ -12,9 +12,9 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "start": "svelte-kit dev",
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
+    "start": "vite dev",
+    "dev": "vite dev",
+    "build": "vite build",
     "deploy": "npm run build && npm run fb:deploy",
     "dev:emu": "cross-env VITE_FIREBASE_EMULATE=1 svelte-kit dev",
     "fb:emu": "firebase emulators:start --import seed",
@@ -33,7 +33,8 @@
     "minimist": "^1.2.6",
     "svelte": "^3.44.0",
     "svelte-check": "^2.7.1",
-    "typescript": "^4.7.2"
+    "typescript": "^4.7.2",
+    "vite": "^4.0.0"
   },
   "dependencies": {
     "firebase": "^9.8.4"
