@@ -9,3 +9,4 @@ node_modules
 firebase-debug.log
 secrets
 src/firebase/config.js
+.nvmrc
