@@ -1,6 +1,31 @@
 # Welcome to FireKit
 
-First thing you need to do: create a `config.js` file in `src/firebase`, you can copy the `config.example.js` file and fill in values per your project.
+First thing you need to do: create a `config.js` file in `src/firebase`, you can copy the `config.example.js` file and fill in values per your project. This information can be found on Firebase under Project Settings > General. Scroll down to the bottom to the `Your Apps` section, if there is no app, click `Add App` and create a web app. This will give you the config information you need for the `config.js` file. Simply copy the `firebaseConfig` object contents to the `export default` object at the bottom of the `config.js` file.
+
+## User and Admin Setup
+
+The baseline app has a sign-in page that requires and Admin user. To create a user:
+* Go to https://firebase.console.google.com 
+* Go to the Authentication > Users tab
+* Click Add User 
+* Add user email and password
+* Once the user is created you can copy the UUID generated, you will need this to make the user an admin.
+
+To make the user an Admin you will need to generate a Service Account Key and run the `makeAdmin` script. To generate a Service Account key:
+* Go to https://firebase.console.google.com 
+* Go to Project Settings > Service accounts
+* Under Firebase Admin SDK, select `Node.js` and click `Generate new private key`
+* Save the file as `serviceAccountKey.json` inside the `secrets` directory.
+
+To promote a user to Admin:
+* Open a terminal window in the root directory of this project.
+* Copy the UUID of the user you want to promote from Firebase console
+* Open a terminal in the root directory of this project.
+* Run `node makeAdmin.local.cjs --uid {UUID}`
+
+Now you should be able to sign-in to the newly created app.
+
+
 
 ## Developing
 
